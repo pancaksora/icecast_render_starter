@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: live-suara-icecast
+    env: docker
+    plan: free
+    autoDeploy: true
+    envVars:
+      - key: ICECAST_SOURCE_PASSWORD
+        value: sourcepass
+      - key: ICECAST_ADMIN_PASSWORD
+        value: adminpass
+      - key: ICECAST_RELAY_PASSWORD
+        value: relaypass
+      - key: ICECAST_ADMIN_EMAIL
+        value: admin@example.com
+      - key: ICECAST_HOSTNAME
+        value: live-suara.onrender.com
